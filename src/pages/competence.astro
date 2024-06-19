@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CompetenceSection from '../components/CompetenceSection.astro';
+---
+
+<BaseLayout>
+  <div class="stack gap-20">
+    <main class="wrapper about">
+      <CompetenceSection />
+    </main>
+  </div>
+</BaseLayout>
+
+<style>
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  width: 100%;
+  max-width: 1200px; /* Optionnel : limitez la largeur maximale si nécessaire */
+  margin: 0 auto; /* Pour centrer le contenu horizontalement */
+  padding: 0 1rem; /* Ajoutez un peu de padding sur les côtés si nécessaire */
+
+  /* Autres styles spécifiques à votre mise en page */
+}
+
+@media (min-width: 50em) {
+  .about {
+    padding: 0 2rem; /* Ajustez le padding pour les écrans plus larges */
+  }
+}
+    .about > :global(:first-child) {
+      grid-column-start: 1;
+    }
+  }
+</style>

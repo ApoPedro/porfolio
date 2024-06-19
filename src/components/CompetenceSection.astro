@@ -1,0 +1,105 @@
+---
+import Card from './Card.astro';
+
+const competences = [
+  {
+    title: 'Réaliser un développement d’application',
+    projects: [
+      { name: 'Logiciel d\'aide à la prise de décision concernant le meilleur itinéraire à prendre pour des personnels de la santé', tag: 'SAE S2' },
+      { name: 'Application mobile de génération de recette', tag: 'Cours mobile' },
+      { name: 'Application d\'API d\'annuaire', tag: 'SAE S1' },
+      { name: 'Application de gestion de liste deux course en ligne', tag: 'Cours Symfony' },
+    ],
+    level: 'bonne maîtrise',
+    feedback: 'À la suite de ces différents projets, j\'ai acquis une bonne maîtrise dans le développement d\'application. Je continue à exercer cette compétence via des projets personnels de développement.'
+  },
+  {
+  "title": "Optimiser des applications informatiques",
+  "projects": [
+    { "name": "Logiciel d'aide à la prise de décision concernant le meilleur itinéraire à prendre pour des personnels de la santé", "tag": "SAE S2" },
+    { "name": "Application d'API d'annuaire", "tag": "SAE S1" }
+  ],
+  "level": "Bases solide",
+  "feedback": "Grâce à mon parcours en réalisation d'applications et à mon expérience lors de mon stage, j'ai acquis de bonnes bases en optimisation des applications informatiques. J'ai pu appliquer ces connaissances pour améliorer l'efficacité et réduire la consommation de ressources de mes projets, démontrant ainsi ma capacité à optimiser les performances des applications."},
+  {
+    title: 'Administrer des systèmes informatiques communicants complexes',
+    projects: [
+    { name: 'Application de gestion de liste deux course en ligne', tag: 'Cours Symfony' },
+    { name: 'Editeur de poste sur les réseaux sociaux', tag: 'Mission de stage' },
+    ],
+    level: 'bases solides',
+    feedback: 'Grâce au BUT, j\'ai pu obtenir des bases solides, même si je n\'ai jamais travaillé sur des projets qui sollicitaient cette compétence de façon approfondie.'
+  },
+  {
+    title: 'Gérer des données de l’information',
+    projects: [
+      { name: 'Logiciel d\'aide à la prise de décision concernant le meilleur itinéraire à prendre pour des personnels de la santé', tag: 'SAE S2' },
+      { name: 'Application mobile de génération de recette', tag: 'Cours mobile' },
+      { name: 'Application d\'API d\'annuaire', tag: 'SAE S1' },
+      { name: 'Application de gestion de liste deux course en ligne', tag: 'Cours Symfony' },
+    ],
+    level: 'notions',
+    feedback: 'Dû fait que les , je maîtrise bien cette compétence et je l\'ai mise à profit durant plusieurs projets, aussi bien académiques que personnels.'
+  },
+  {
+    title: 'Conduire un projet',
+    projects: [
+      { name: 'Application d\'aide à la prise de décision concernant le meilleur itinéraire à prendre pour des personnels de la santé', tag: 'SAE S2' },
+      { name: 'Application de jeu de coinche en ligne en temps réel', tag: 'Projet Personnel' },
+      { name: 'Application de génération de programme de plan de palettisation', tag: 'Projet Académique' },
+    ],
+    level: 'bonne maîtrise',
+    feedback: 'J\'ai surtout travaillé cette compétence lors de projets dans le cadre du BUT. Je suis à l\'aise concernant le pilotage et l\'encadrement d\'un projet.'
+  },
+  {
+    title: 'Travailler dans une équipe informatique',
+    projects: [
+    { name: 'Editeur de poste sur les réseaux sociaux', tag: 'Mission de stage' },
+    { name: 'Site web de covoiturage', tag: 'SAE S3-S4' },
+    ],
+    level: 'bonne maîtrise',
+    feedback: 'Cette compétence a été seulement travaillée lors du projet de deuxième année de BUT. Le projet s\'est bien déroulé et je pense que j\'ai une personnalité adaptée au travail d\'équipe. Je pense pouvoir m\'améliorer dans cette compétence lors de mon alternance en troisième année.'
+  }
+];
+---
+
+<section>
+  <h2 class="section-title">Portefeuille de Compétences</h2>
+  <p>Vous pourrez trouver ci-dessous mon portefeuille de compétences reprenant le référentiel académique de l'IUT</p>
+  <div class="card-container">
+    {competences.map((competence) => (
+      <Card title={competence.title} projects={competence.projects} level={competence.level} feedback={competence.feedback} />
+    ))}
+  </div>
+</section>
+
+<style>
+  .section-title {
+    font-size: var(--text-xl);
+    color: var(--gray-0);
+  }
+
+  .card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  @media (min-width: 50em) {
+    .card-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (min-width: 75em) {
+    .card-container {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  p {
+  font-size: 1.3rem;
+  color: #37474f; /* Couleur du texte */
+  margin-bottom: 1rem; /* Marge en bas */
+}
+
+</style>

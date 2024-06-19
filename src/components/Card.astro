@@ -1,0 +1,58 @@
+---
+interface Props {
+  title: string;
+  projects: { name: string; tag: string }[];
+  level: string;
+  feedback: string;
+}
+
+const { title, projects, level, feedback } = Astro.props;
+import Tag from './Tag.astro';
+---
+
+<div class="card">
+  <h3 class="card-title">{title}</h3>
+  <ul class="card-projects">
+    {projects.map((project) => (
+      <li>
+        {project.name} <Tag text={project.tag} />
+      </li>
+    ))}
+  </ul>
+  <div class="card-level">
+    <strong>Niveau :</strong> {level}
+  </div>
+  <div class="card-feedback">
+    <strong>Ressenti :</strong> {feedback}
+  </div>
+</div>
+
+<style>
+  .card {
+    background-color: var(--gray-800);
+    color: var(--gray-200);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow-md);
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .card-projects {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0;
+  }
+
+  .card-projects li {
+    margin-bottom: 0.25rem;
+  }
+
+  .card-level, .card-feedback {
+    margin-top: 0.5rem;
+  }
+</style>
