@@ -3,7 +3,9 @@ import node from "@astrojs/node";
 
 import { defineConfig } from 'astro/config'
 
+import netlify from '@astrojs/netlify';
+
 export default defineConfig({
-  site: 'https://apopedro.github.io',
-  base: 'my-repo',
-})
+  output: 'server',
+  adapter: netlify(),
+});
