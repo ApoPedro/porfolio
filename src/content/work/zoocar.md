@@ -1,7 +1,7 @@
 ---
 title: ZooCar
 publishDate: 2019-12-01 00:00:00
-img: /assets/zoocar.jpg
+img: /assets/zoocar.svg
 img_alt: A modern car parked in front of a zoo entrance, with vibrant animal illustrations.
 description: |
   Developed a comprehensive animal-friendly carpooling application, facilitating affordable and accessible pet transportation.
