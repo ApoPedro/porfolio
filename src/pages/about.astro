@@ -2,11 +2,18 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="About | Pedro Besse" description="About Pedro Pedro Besse Lorem Ipsum">
+<BaseLayout title="About | Pedro Besse" description="About Pedro Besse">
 	<div class="stack gap-20">
 		<main class="wrapper about">
-			
-
+			<section>
+				<h1 class="section-title">About Me</h1>
+				<div class="content">
+					<p>I am a passionate computer science student currently in my second year of a Bachelor's in Technology (BUT) in Computer Science. My enthusiasm for technology and innovation drives me to continually expand my knowledge and skills in this ever-evolving field.</p>
+					<p>In addition to my academic pursuits, I am an avid cyclist and enjoy the thrill of exploring new trails and challenging myself physically. Cycling provides me with a perfect balance to my studies, offering a way to stay fit and clear my mind.</p>
+					<p>I also have a keen interest in table tennis. Playing ping pong is not only a fun recreational activity for me but also a great way to improve my reflexes and strategic thinking, both of which are valuable in my studies and future career in computer science.</p>
+					<p>Having completed my high school diploma (baccalauréat), I am now focused on excelling in my current studies and looking forward to the exciting opportunities and challenges that lie ahead in the world of computer science.</p>
+				</div>
+			</section>
 		</main>
 	</div>
 </BaseLayout>
@@ -27,7 +34,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	section {
 		display: flex;
 		flex-direction: column;
-		gap: 0.5rem;
+		gap: 1.5rem; /* Augmentez l'espacement entre les éléments */
 		color: var(--gray-200);
 	}
 
@@ -39,6 +46,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 	.content {
 		grid-column: 2 / 4;
+		font-size: 1.125rem; /* Augmentez légèrement la taille de la police */
+		line-height: 1.75rem; /* Améliorez la lisibilité en augmentant la hauteur de ligne */
+		color: var(--gray-300); /* Utilisez une couleur plus claire pour les paragraphes */
+	}
+
+	.content p {
+		margin-bottom: 1.5rem; /* Ajoutez de l'espacement entre les paragraphes */
 	}
 
 	.content :global(a) {

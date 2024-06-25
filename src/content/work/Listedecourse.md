@@ -1,7 +1,7 @@
 ---
 title: Shared Shopping List
 publishDate: 2023-06-17 00:00:00
-img: /assets/shared-shopping-list.jpg
+img: /assets/stock-1.jpg
 img_alt: A minimalist shopping list interface inspired by Obsidian.
 description: |
   A minimalist, user-friendly shared shopping list application inspired by Obsidian, featuring authentication, statistics, and role-based access control.

@@ -1,7 +1,7 @@
 ---
 title: PAC - Pacman Project
 publishDate: 2024-06-17 00:00:00
-img: /assets/pacman-project.jpg
+img: /assets/pacman.png
 img_alt: A classic Pacman game screen with vibrant colors and characters.
 description: |
   A collaborative Pacman game project developed as part of our quality development course, emphasizing best practices and modern development tools.

@@ -1,7 +1,7 @@
 ---
 title: VideTonFrigo
 publishDate: 2024-06-17 00:00:00
-img: /assets/vide-ton-frigo.jpg
+img: /assets/frigo.jpg
 img_alt: An app interface showing a recipe generated from listed ingredients.
 description: |
   VideTonFrigo is an innovative application that generates recipes based on listed ingredients or described cravings. Utilizing ChatGPT-3.5 and a custom layer, it creates JSON outputs from prompts.
